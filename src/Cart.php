@@ -64,6 +64,13 @@ class Cart
     private $discount = 0;
 
     /**
+     * Defines the discount percentage.
+     *
+     * @var float
+     */
+    private $fixedDiscount = 0;
+
+    /**
      * Defines the tax rate.
      *
      * @var float
@@ -411,6 +418,16 @@ class Cart
         return $this->getContent()->reduce(function ($discount, CartItem $cartItem) {
             return $discount + $cartItem->discountTotal;
         }, 0);
+    }
+
+    public function getFixedDiscount()
+    {
+        return $this->fixedDiscount;
+    }
+
+    public function setFixedDiscount($fixedDiscount)
+    {
+        $this->fixedDiscount = $fixedDiscount;
     }
 
     /**
