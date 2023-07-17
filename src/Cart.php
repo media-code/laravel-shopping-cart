@@ -77,6 +77,8 @@ class Cart
      */
     private $taxRate = 0;
 
+    private $foo = 'rab';
+
     /**
      * Cart constructor.
      *
@@ -104,10 +106,12 @@ class Cart
     {
         $instance = $instance ?: self::DEFAULT_INSTANCE;
 
+       
         if ($instance instanceof InstanceIdentifier) {
             $this->discount = $instance->getInstanceGlobalDiscount();
             $this->fixedDiscount = $instance->getInstanceGlobalFixedDiscount();
             $instance = $instance->getInstanceIdentifier();
+            $instance->foo = 'bar';
         }
 
         $this->instance = 'cart.'.$instance;
