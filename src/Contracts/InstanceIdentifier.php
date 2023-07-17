@@ -17,4 +17,6 @@ interface InstanceIdentifier
      * @return int|string
      */
     public function getInstanceGlobalDiscount($options = null);
+
+    public function getInstanceFixedDiscount($options = null);
 }

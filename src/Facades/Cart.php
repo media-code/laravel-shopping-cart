@@ -27,6 +27,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static float subtotalFloat()
  * @method static float taxFloat()
  * @method static float weightFloat()
+ * @method static int getFixedDiscount()
  * @method static void setDiscount(string $rowId, float|int $discount)
  * @method static void setTax(string $rowId, float|int $taxRate)
  * @method static void setGlobalDiscount( float|int $discount)
